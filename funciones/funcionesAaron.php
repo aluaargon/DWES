@@ -64,7 +64,28 @@
         
                 }
 
-            echo insert($tabla, $campos);
+                echo insert($tabla, $campos);
+
+                // ----------------Ejercicio4----------------------
+                echo "</br> -----------------Ejercicio4------------------ </br>";
+
+                function resultado(callable $operacion, $signo, $num1, $num2) {
+                    echo $num1 . " " . $signo . " " . $num2 . " = " . $operacion($num1, $num2);
+                }
+                $suma = function($num1, $num2) {
+                    return $num1 + $num2;
+                }
+                $resta = function($num1, $num2) {
+                    return $num1 + $num2;
+                }
+                $division = function($num1, $num2) {
+                    return $num1 + $num2;
+                }
+                $multiplicacion = function($num1, $num2) {
+                    return $num1 + $num2;
+                }    
+
+                resultado($suma, "+", 2, 2);
             ?>
         </body>
     </html>
