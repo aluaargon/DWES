@@ -11,7 +11,12 @@
             echo count($nombres);
             $nombresSeparadosEspacio = implode(" ", $nombres);
             echo $nombresSeparadosEspacio;
-           
+            asort($nombres);
+            foreach($ombres as $nombre){
+                echo $nombre . '<br>';
+            }
+            $reversed = 
+
         ?>
     </body>
 </html>
