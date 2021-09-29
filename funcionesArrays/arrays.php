@@ -27,9 +27,14 @@
                 array("id" => "3", "nombre" => "Sara", "edad" => 21),
                 array("id" => "4", "nombre" => "Rocio", "edad" => 18)    
             );
-            print_r($alumnos) . '<br>';
-            
-            
+            print_r($alumnos);
+            echo '<br>';
+            print_r(array_column($alumnos, 'nombre'));
+            echo '<br>';
+
+            $numeros = array(10, 10, 10, 2, 6, 4, 10, 6 ,8, 2);
+
+            echo 'La suma del array de numeros es: ' . array_sum($numeros);
        ?>
        <table >
            <tr>
