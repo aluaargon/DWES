@@ -30,7 +30,7 @@
 
             // Ejercicio 5 
             $prefijo = $_GET["prefijo"]?? "";
-            echo ($prefijo != "")? ((strpos($nombre, $prefijo) === 0)? "El nombre Sí empieza por el prefijo " . $prefijo : "El nombre No empieza por el prefijo " . $prefijo) : 'No hay prefijo';
+            echo ($prefijo != "")? "El nombre " . ((strpos($nombre, $prefijo) === 0)? "Sí " : "No ") . " empieza por el prefijo " . $prefijo : 'No hay prefijo';
             echo '<br>';
 
             // Ejercicio 6
