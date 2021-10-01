@@ -30,7 +30,19 @@
 
             // Ejercicio 5 
             $prefijo = $_GET["prefijo"]?? "";
-            echo (strpos($nombre, $prefijo) === 0)? "El nombre Sí empieza por el prefijo " . $prefijo : "El nombre No empieza por el prefijo " . $prefijo;
+            echo ($prefijo != "")? ((strpos($nombre, $prefijo) === 0)? "El nombre Sí empieza por el prefijo " . $prefijo : "El nombre No empieza por el prefijo " . $prefijo) : 'No hay prefijo';
+            echo '<br>';
+
+            // Ejercicio 6
+            echo 'La a aparece ' . substr_count(strtolower($nombre), 'a') . ' veces en el nombre';
+            echo '<br>';
+
+            // Ejercicio 7
+            echo (stripos($nombre, 'a') != false)? 'La posición de la a en la cadena nombre es: ' . (stripos($nombre, 'a') + 1) : 'La cadena no contien la letra a';
+            echo '<br>';
+
+            // Ejercicio 8
+            echo 'Si sustituimos las o por 0 en el nombre quedaría así: ' . str_ireplace('o', '0', $nombre);
 
            ?>
     </body>
