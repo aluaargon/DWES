@@ -43,6 +43,15 @@
 
             // Ejercicio 8
             echo 'Si sustituimos las o por 0 en el nombre quedaría así: ' . str_ireplace('o', '0', $nombre);
+            echo '<br>';
+
+            // Ejercicio 9 URL
+            $url = 'http://username:password@hostname:9090/path?arg=value';
+            echo 'La url: ' . $url . '<br>';
+            echo 'El protocolo: ' . parse_url($url, PHP_URL_SCHEME) . '<br>';
+            echo 'El usuario: ' . parse_url($url, PHP_URL_USER) . '<br>';
+            echo 'El path: ' . parse_url($url, PHP_URL_PATH) . '<br>';
+            echo 'El querystring: ' . parse_url($url, PHP_URL_QUERY);
 
            ?>
     </body>
