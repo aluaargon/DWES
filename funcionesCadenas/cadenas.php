@@ -38,7 +38,7 @@
             echo '<br>';
 
             // Ejercicio 7
-            echo (stripos($nombre, 'a') != false)? 'La posición de la a en la cadena nombre es: ' . (stripos($nombre, 'a') + 1) : 'La cadena no contien la letra a';
+            echo (stripos($nombre, 'a') != false)? 'La posición de la a en la cadena nombre es la: ' . (stripos($nombre, 'a') + 1) : 'La cadena no contien la letra a';
             echo '<br>';
 
             // Ejercicio 8
