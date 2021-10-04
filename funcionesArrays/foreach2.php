@@ -8,9 +8,9 @@
     <body>
         <ul>
         <?php
-        $colors = array('blanco', 'verde', 'rojo');
-            foreach($colors as $color){
-                echo '<li>' . $color . '</li>';
+        $colors = array('blanco'=>'blanco.html', 'verde' => 'verde.html', 'rojo' => 'rojo.html');
+            foreach($colors as $key => $valor){
+                echo "<li><a href='" . $valor . "'> " . $key . '</a></li>';
             }
         ?>
         </ul>
