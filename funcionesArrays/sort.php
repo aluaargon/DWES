@@ -30,7 +30,7 @@
         }
         echo '<br>';
         // Descendente por la edad
-        arsort($Edades);
+        arsort($edades);
         echo 'Descendente por la edad: ';
         foreach($edades as $key => $value) {
             echo "{$key} => {$value} ";

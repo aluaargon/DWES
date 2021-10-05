@@ -12,15 +12,35 @@
         $tempMesArray = explode( ", ", $termperaturasMes);
         echo "La media del array es: " . (array_sum($tempMesArray)/30) . "<br>";
         echo "Máximas: <br>";
-        asort($tempMesArray, SORT_NUMERIC);
-        for ($i=0; $i < 5; $i++) { 
-            echo " ". $i+1 . ". " . $tempMesArray[$i] . "<br>";
+        rsort($tempMesArray);
+        $count = 0;
+        $cadenaMaximas = "";
+        // Esta variable es en teoria el grado anterior pero para que me cogiese si o si 
+        // la primera temperatura del array lo e puesto a -2000 para que en teoria simpre se ejecute la primera vez
+        $anterior = -2000;
+        // Este for y el siguiente lo que hacen es comprobar que el numero actual no sea el mismo que el anterior
+        // y si no es el mismo me lo guarda en la cadena
+        for ($i=0; $count < 5; $i++) { 
+            if ($tempMesArray[$i] != $anterior) {
+                $cadenaMaximas .= " ". $count+1 . ". " . $tempMesArray[$i] . "<br>";    
+                $count++;
+                $anterior = $tempMesArray[$i];
+            }
         }
+        echo $cadenaMaximas;
         echo "<br> Minimas <br>";
-        arsort($tempMesArray, SORT_NUMERIC);
-        for ($i=0; $i < 5; $i++) { 
-            echo " ". $i+1 . ". " . $tempMesArray[$i] . "<br>";
+        sort($tempMesArray);
+        $cadenaMinimos = "";
+        $anterior = -2000;
+        $count = 0;
+        for ($i=0; $count < 5; $i++) { 
+            if ($tempMesArray[$i] != $anterior) {
+                $cadenaMinimos .= " ". $count+1 . ". " . $tempMesArray[$i] . "<br>";    
+                $count++;
+                $anterior = $tempMesArray[$i];
+            }
         }
+        echo $cadenaMinimos;
         ?>
     </body>
 </html>
