@@ -12,13 +12,14 @@
             $nombresSeparadosEspacio = implode(" ", $nombres);
             echo $nombresSeparadosEspacio  . '<br>';
             asort($nombres);
-            foreach($nombres as $nombre){
-                echo $nombre . '<br>';
-            }
+            $cadenaNombres = implode("<br>", $nombres);
+            // foreach($nombres as $nombre){
+            //     echo $nombre . '<br>';
+            // }
+            echo $cadenaNombres . '<br>';
             $reversed = array_reverse($nombres);
-            foreach($reversed as $reverse){
-                echo $reverse . '<br>';
-            }
+            $cadenaNombresReversed = implode("<br>", $reversed);
+            echo $cadenaNombresReversed;
             echo "Aaron esta en la clave: " . array_search('Aaron', $nombres) . '<br>';
             
             $alumnos = array(

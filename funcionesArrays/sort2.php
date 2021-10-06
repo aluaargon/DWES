@@ -13,7 +13,9 @@
         echo "La media del array es: " . (array_sum($tempMesArray)/30) . "<br>";
         echo "Máximas: <br>";
         rsort($tempMesArray);
-        $count = 0;
+        $cadenaMax = implode(", ", array_slice($tempMesArray, 0, 6));
+        echo $cadenaMax;
+        /*$count = 0;
         $cadenaMaximas = "";
         // Esta variable es en teoria el grado anterior pero para que me cogiese si o si 
         // la primera temperatura del array lo e puesto a -2000 para que en teoria simpre se ejecute la primera vez
@@ -26,11 +28,13 @@
                 $count++;
                 $anterior = $tempMesArray[$i];
             }
-        }
+        }*/
         echo $cadenaMaximas;
         echo "<br> Minimas <br>";
         sort($tempMesArray);
-        $cadenaMinimos = "";
+        $cadenaMin = implode(", ", array_slice($tempMesArray, 0, 6));
+        echo $cadenaMin;
+        /*$cadenaMinimos = "";
         $anterior = -2000;
         $count = 0;
         for ($i=0; $count < 5; $i++) { 
@@ -40,7 +44,9 @@
                 $anterior = $tempMesArray[$i];
             }
         }
-        echo $cadenaMinimos;
+        echo $cadenaMinimos;*/
+
+
         ?>
     </body>
 </html>
