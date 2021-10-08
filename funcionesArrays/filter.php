@@ -42,7 +42,7 @@
                     function($contacto) use ($filtrarPor){
                         
                         
-                        return (substr(strtolower($contacto["email"]), -strlen($filtrarPor)) == $filtrarPor)? true : false;
+                        return (substr(strtolower($contacto["email"]), -strlen($filtrarPor)) == $filtrarPor);
                     });
 
                 print_r($filtrados);
