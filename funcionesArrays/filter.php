@@ -31,7 +31,6 @@
         
                 );
 
-                //print_r($contactos);
 
                 echo '<br>';                  
 
