@@ -35,15 +35,14 @@
 
                 echo '<br>';                  
 
-                $filtrarPor = strtolower($_GET["filtrarPor"] ?? "@gmail.com");
-               
+                $filtrarPor = strtolower($_GET["filtrarPor"] ?? "gmail.com"); 
 
                 $filtrados = array_filter($contactos, 
 
                     function($contacto) use ($filtrarPor){
-
-                        return strpos(strtolower($contacto["email"]), $filtrarPor);
-
+                        
+                        
+                        return (substr(strtolower($contacto["email"]), -strlen($filtrarPor)) == $filtrarPor)? true : false;
                     });
 
                 print_r($filtrados);
