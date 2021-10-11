@@ -6,9 +6,7 @@ $language = "";
 
 //Crea aquí tu script para seleccionar el idioma
 
-    $language = strtolower($_GET["setLanguage"] ?? $_COOKIE["lenguageCookie"] ?? "es");
-    
-    setcookie("lenguageCookie", $language);
+    $language = $language = substr($_SERVER["HTTP_ACCEPT_LANGUAGE"], 0, 2);
 
 
 //Fin script
